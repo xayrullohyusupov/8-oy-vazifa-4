@@ -13,9 +13,115 @@ from .serializers import (
     BannerSerializer,
     NavbarInfoSerializer,
     FooterInfoSerializer,
-    ProductEnterSerializer
+    ProductEnterSerializer,
+    WishListSerializer,
+    CategorySerializer,
+    OrderSerializer
     )
 
+from Goods.models import Banner, Category, Order, NavbarInfo, FooterInfo, WishList
+
+
+class BannerCreateAPIView(generics.CreateAPIView):
+    queryset = Banner.objects.all()
+    serializer_class = BannerSerializer
+
+class BannerUpdateAPIView(generics.UpdateAPIView):
+    queryset = Banner.objects.all()
+    serializer_class = BannerSerializer
+
+class BannerDeleteAPIView(generics.DestroyAPIView):
+    queryset = Banner.objects.all()
+    serializer_class = BannerSerializer
+
+class BannerListAPIView(generics.ListAPIView):
+    queryset = Banner.objects.all()
+    serializer_class = BannerSerializer
+
+
+class CategoryCreateAPIView(generics.CreateAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+class CategoryUpdateAPIView(generics.UpdateAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+class CategoryDeleteAPIView(generics.DestroyAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+class CategoryListAPIView(generics.ListAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
+class OrderCreateAPIView(generics.CreateAPIView):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
+class OrderUpdateAPIView(generics.UpdateAPIView):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
+class OrderDeleteAPIView(generics.DestroyAPIView):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
+class OrderListAPIView(generics.ListAPIView):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
+
+class NavbarInfoCreateAPIView(generics.CreateAPIView):
+    queryset = NavbarInfo.objects.all()
+    serializer_class = NavbarInfoSerializer
+
+class NavbarInfoUpdateAPIView(generics.UpdateAPIView):
+    queryset = NavbarInfo.objects.all()
+    serializer_class = NavbarInfoSerializer
+
+class NavbarInfoDeleteAPIView(generics.DestroyAPIView):
+    queryset = NavbarInfo.objects.all()
+    serializer_class = NavbarInfoSerializer
+
+class NavbarInfoListAPIView(generics.ListAPIView):
+    queryset = NavbarInfo.objects.all()
+    serializer_class = NavbarInfoSerializer
+
+
+class FooterInfoCreateAPIView(generics.CreateAPIView):
+    queryset = FooterInfo.objects.all()
+    serializer_class = FooterInfoSerializer
+
+class FooterInfoUpdateAPIView(generics.UpdateAPIView):
+    queryset = FooterInfo.objects.all()
+    serializer_class = FooterInfoSerializer
+
+class FooterInfoDeleteAPIView(generics.DestroyAPIView):
+    queryset = FooterInfo.objects.all()
+    serializer_class = FooterInfoSerializer
+
+class FooterInfoListAPIView(generics.ListAPIView):
+    queryset = FooterInfo.objects.all()
+    serializer_class = FooterInfoSerializer
+
+
+class WishListCreateAPIView(generics.CreateAPIView):
+    queryset = WishList.objects.all()
+    serializer_class = WishListSerializer
+
+class WishListUpdateAPIView(generics.UpdateAPIView):
+    queryset = WishList.objects.all()
+    serializer_class = WishListSerializer
+
+class WishListDeleteAPIView(generics.DestroyAPIView):
+    queryset = WishList.objects.all()
+    serializer_class = WishListSerializer
+
+class WishListListAPIView(generics.ListAPIView):
+    queryset = WishList.objects.all()
+    serializer_class = WishListSerializer
 
 
 class LogoutView(APIView):
@@ -93,3 +199,4 @@ class ProductListCreateAPIView(generics.ListCreateAPIView):
 class ProductDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = ProductEnter.objects.all()
     serializer_class = ProductEnterSerializer
+

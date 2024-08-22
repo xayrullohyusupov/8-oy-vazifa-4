@@ -8,7 +8,9 @@ from Goods.models import (
     Banner,
     NavbarInfo, 
     FooterInfo, 
-    ProductEnter
+    ProductEnter,
+    WishList,
+    Category
     )
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -72,4 +74,39 @@ class FooterInfoSerializer(serializers.ModelSerializer):
 class ProductEnterSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProductEnter
+        fields = '__all__'
+
+class BannerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Banner
+        fields = '__all__'
+
+# Category Serializer
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = '__all__'
+
+# Order Serializer
+class OrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+        fields = '__all__'
+
+# NavbarInfo Serializer
+class NavbarInfoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = NavbarInfo
+        fields = '__all__'
+
+# FooterInfo Serializer
+class FooterInfoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FooterInfo
+        fields = '__all__'
+
+# WishList Serializer
+class WishListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = WishList
         fields = '__all__'
